@@ -5,7 +5,7 @@ let jwt         = require("jsonwebtoken");
 let db;
 
 MongoClient.connect("mongodb://localhost:27017", {useNewUrlParser: true}, function(err, client){
-  db = client.db("simpleblog");
+  db = client.db("hackathon");
 })
 
 module.exports.login = function(req, res){
