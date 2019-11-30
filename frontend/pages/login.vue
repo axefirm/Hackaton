@@ -18,13 +18,13 @@
       {{$store.state._id}}
       {{amITyping}}
       <button type="button" @click="changeIt" name="button">Hello</button>
+      <fa  :icon="['far', 'play-circle']" />
     </v-flex>
   </v-layout>
 </template>
 
 <script>
 export default {
-  layout: 'funny',
   data(){
     return{
       username: "",
@@ -61,7 +61,7 @@ export default {
           maxAge: 60 * 60 * 24 * 7
         })
         this.$store.dispatch('login', {token: res.data.token, _id: res.data._id})
-        this.$router.push("/secret")
+        this.$router.push("/admin")
       }
     }
   }
