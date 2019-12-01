@@ -53,7 +53,7 @@ export default {
   data() {
     return {
 
-      dropdown_font: ['Link1', 'Link2', 'Link3'],
+      dropdown_font: ['Үнэт зүйл', 'Эртний эдлэл', 'Уран зураг','үл хөдлөх хөрөнгө'],
 
 
       seed: {
@@ -71,9 +71,11 @@ export default {
           {title: "Logo", to: "/", active: false, src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAAmCAYAAADgIjRrAAAFZ0lEQVR4nO1cXWhcRRT+sqmtra1xUzDFKmjSiD+1WJJIUVtaSFGLD33Z4kOLIHZTVFTEmtRaivpgWkVaisKufRDEl0aKVBSkUREpSu0WRfzJQ/IkalUMiG0hGiOnd4acPZm5d/fesTvdez+47N2ZuXPPnW/OmXPOnd2WzgMz8wG8DGArgHY0FpMA3gKwE8DU+BMNlqZJMA/AfgCPe/I4eSXLeQBDHsjTFMgB2Obhg2z3QIamQc4DE22CjzJdssilfQDSgIzkFCAjOQXISE4BnJPctiDtQ+of5rmUaMMNQOEW4JH3G/ucXQdDq48D6GffNwIYdXDbGXbe4qC/EoAigDKAgST3cqbJ81uB59YB96wA7ljuqlfn6BQEEwoeyjmoCIb6LEa0D4Uzkos9wPVXBee71wE5F3PZPUyEFlSmzSdUhCwTSWRzQvI1S4AdfbPfV14NbL7JRc/OwTVCD1zeQ20eVSZam+pEy4kTknetBRaK1f3pO4FFl7no3Rn6lbmG0pQy69hHk11mRCdCYpLXXAts6p5b3rEY2N6TtHen4ESWxeDxCdB0SERyaw7Yu95eTyQvW+zFkOWFqR5RrzVHWFkt2lxU3vmMOk4pJ8m2pg+Ltjb8wdppx3CGHfWgJK4tJiJ56yrgxqX2ejLhZLY9ACdQEwxBcpgHm1cklYR33qOIPG65rizamqwFd/wqCdffkniOC+Y+NsntC4En11SXTU0DX/9SXbb5ZuC2jrh3cQapxfxcE24KrzSOKJI0JhQZ2gu2LUwTgjSTteD3HDHU1woZag3pSRabZNLQK0V2682vgF0fAdPMwFAktXttAtGTo5ORIE00ajDZBUYEXb+F8i0qidKrPicN15n6l9ZCLiNxnayi0mLezz79JRbJq5cBhVury347B7x2Ehj7HXjn2+q6vuXAvSvi3MkJogZRetlyfeXE7zNMktGIXSxlYS241tuWkXpgIrgqQ1Y3yZTkIGdLJjteOQH8NRWcH/gCOPd3df3Q3UFWrAHgAzkonBLpEJliZm5ObZoWZWZt4ZoLU80JnjCkQOsnmTRYrrHfnAGOfg/c1x0cv54F3hA5m+vagAdvr/duiUEDWm9oZDKpGjZNi9JATrLun0+oiYTrsUanacmpi2Rag6W3TKrwwqdA2+XA8+uDY+ki4PDpgGyOR/sCh+0iwuZIhUF6wZxA24SJSotyB0yTa3MG44CnPUtSzrpIJm9akvTeGHD6Z+DFDQG5dBDRZK5f/by67ZIFcz3y/xHSqelSfqDtsDlIUd6xbG8D77/fkJyJi4py/rTtzAsTXjvJFA9TXMxx/h9g/4mg4LEPgld8dNA54eh3gSPG8cBKoDsktnYIPoijNST5bWTy8kED0QVVHgXugBWZA1aLbGHYaFiL+7lMNZNMzlaraF0+BazqAEa2ALQRXm6Gp1Dqpc+qy6iPZy9OSFWvOeRt+NpWFqaWYuZxlQAZV99rfYtlkiOpqdYTpyK8/GE9kegXFJFpM8pNH9o0t/zMWaDjiuCcPOu9nwDv/pBQ5Fm0xP0FRdfBCw/Hveb2GsOTI4JcrR15Raot6VEWk8r2olXKNamWEZNsYRsDwur4pgjS8N5ITaY3STbN0wTTmnz/204JToq48Sc3zUWmoZMq8SFf+2ntGTC8AzahItrFjY3DMCDi8uFITd55F7Cj11w3/S/w+pfAoZPBuWPE1uQM1Qjd40U7PR5aba778U/gqQ+Byk/ZiPqOUJJpz5YpS3VsDNjz8WyGK4PfCCX54WMZe82AbHN9CpCRnAJkJKcAObW/yDf4KNMli5z6jw7fcDjtxLgEedfPqNTYNg9+SaD/GGZPg+VoHgD4D0S+Oy0BEwkjAAAAAElFTkSuQmCC"},
           {title: "Home", to: "/", active: true},
           {title: "Guide", to: "/", active: false},
+          {title: "Live", to: "/live", active: false},
+          
         ],
         buttons: [
-          {title: "shopping-bag", to: "/", active: true}
+          {title: "shopping-bag", to: "/profile", active: true}
         ]
       }
     }

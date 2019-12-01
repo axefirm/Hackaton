@@ -14,11 +14,7 @@
       >
       </v-text-field>
       <v-btn color="success" @click="login()">login</v-btn>
-      {{$store.state.token}}
-      {{$store.state._id}}
-      {{amITyping}}
       <button type="button" @click="changeIt" name="button">Hello</button>
-      <fa  :icon="['far', 'play-circle']" />
     </v-flex>
   </v-layout>
 </template>

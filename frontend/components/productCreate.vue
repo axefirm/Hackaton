@@ -72,20 +72,20 @@ const myDate = new Date()
 export default {
   data: () => ({
     items: ['Амьтан', 'Ургамал', 'Үнэт эдлэл', 'Эртний эдлэл'],
-    location: 'jj',
+    location: '',
     valid: false,
-    msg: 'dsf',
+    msg: '',
     dateLast: '1999-07-11T00:00',
     zoruu: 0,
-    productname: 'df',
-    price: 123,
-    item: 'ds',
-    productImage: 'dsfsdfd',
+    productname: '',
+    price: 0,
+    item: '',
+    productImage: '',
     nameRules: [
       v => !!v || 'Name is required',
-      v => v.length <= 10 || 'Name must be less than 10 characters',
+      v => v.length <= 30 || 'Name must be less than 10 characters',
     ],
-    define: 'sdfsd',
+    define: '',
     defineRules: [
       v => !!v || 'хоосон байна.',
     ],
