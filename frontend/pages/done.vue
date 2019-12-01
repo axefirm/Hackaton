@@ -28,7 +28,7 @@ export default {
         if (this.counter != 0) {
             this.counter -= 1
         } else {
-            this.$router.push("/admin");
+            this.$router.push("/index");
             clearInterval(intval)
         }
         }, 1000)

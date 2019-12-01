@@ -18,7 +18,7 @@
                 Бүтээгдэхүүний нэр:   {{productName}}
             </h1>
             <h3>
-                Барааны байрлал: {{location}}
+                Барааны байршил: {{location}}
             </h3>
             <h3>
                 Дуудлага худалдаа эхлэхэд {{price}} хоног үлдлээ.
@@ -26,6 +26,9 @@
             <h4>
                 Ehleh une: {{price}}
             </h4>
+            <div class="my-2">
+              <v-btn depressed large color="primary">Сагсанд Нэмэх</v-btn>
+            </div>
         </div>
         <div id="desc">
             <h1>

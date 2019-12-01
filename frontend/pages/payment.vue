@@ -1,7 +1,6 @@
 <template>
     <div>
         <Payment/>
-        haha
     </div>
 </template>
 <script>
