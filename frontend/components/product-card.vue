@@ -28,7 +28,7 @@ export default {
 
 <style lang="css" scoped>
 .main{
-  width: 100% !important!;
+  width: 100% !important;
   height: auto;
 }
 .container{
