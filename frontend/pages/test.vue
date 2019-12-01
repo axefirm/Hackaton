@@ -1,34 +1,36 @@
-<template lang="html">
-  <v-layout>
-    aaaaaaaaaaa
-    <ul>
-      <li v-for="item in res">
-        {{item.name}}
-        {{item.price}}
-        {{item.date}}
-
-      </li>
-    </ul>
-    <!-- <div class="">
-      {{res[1].date}}
-    </div> -->
-  </v-layout>
+<template>
+    <div>
+        {{counter}}
+        {{msj}}
+        <button @click="updateTime">Daraa</button>
+    </div>
 </template>
-
 <script>
-export default {
-  async asyncData({$axios, redirect}){
-    let response = await $axios.$get("http://localhost:8080/admin");
-    console.log(response);
-    if(response.success=true){
-      return{
-        res: response.data.products
-      }
-    }
-  },
 
+export default {
+    data:()=>({
+        counter: 5,
+        msj: ''
+    }),
+    methods: {
+        updateTime(){
+            this.counter=30;
+        }
+    },
+    computed: {
+        percent () {
+        return this.counter.toFixed()
+        }
+    },
+    created () {
+        var intval = setInterval(() => {
+        if (this.counter != 0) {
+            this.counter -= 1
+        } else {
+            this.msj = 'bayar hurgii';
+            clearInterval(intval)
+        }
+        }, 300)
+    }
 }
 </script>
-
-<style lang="css" scoped>
-</style>
