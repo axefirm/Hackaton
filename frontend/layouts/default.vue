@@ -2,16 +2,17 @@
   <v-app>
     <Navbar/>
     <nuxt/>
+    <Footer/>
   </v-app>
 </template>
 
 <script>
 import Navbar from "~/components/navbar.vue";
-import live from "~/components/live.vue";
+import Footer from "~/components/footer.vue";
 export default {
   components:{
-
-    Navbar
+    Navbar,
+    Footer
   }
 
 }
