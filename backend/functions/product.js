@@ -24,7 +24,10 @@ module.exports.addProductOfClient =  function(req, res){
   console.log(req.body);
   const bool = false;
   req.body.bool = bool;
-  req.body.date = date.format(now,'ddd MMM DD YYYY');
+  req.body.date = now;
+  req.body.dateLast = new Date(req.body.dateLast)
+  // req.body.zoruu=(req.body.dateLast.getTime()-req.body.date.getTime())/ (1000 * 3600 * 24)
+  // console.log(req.body.dateLast-req.body.date)
   db.collection("products").insertOne(req.body, function(err, dbres){
     if(err) res.json({success: false, data: {message: "Insert hiisengui!"}})
     else res.json({success: true, data: {message: "Product added"}})

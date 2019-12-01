@@ -45,11 +45,9 @@ export default {
       password: ""
     }
   },
-  methods:{
+  methods: {
     async submit(){
-      console.log(this.username,this.password)
-      let res = await this.$axios.$post("http://localhost:8080/adminLogin", {username: this.username, password: this.password})
-      console.log(res)
+      let res = await this.$axios.$post("http://localhost:8080/adminLogin", {username: this.username , password: this.password});
       if(res.success){
         this.$cookies.set('_id', res.data._id, {
           path: '/',
@@ -59,8 +57,7 @@ export default {
           path: '/',
           maxAge: 60 * 60 * 24 * 7
         })
-        this.$store.dispatch('login', {token: res.data.token, _id: res.data._id})
-        this.$router.push("/test")
+        this.$router.push("/secret")
       }
     }
   }

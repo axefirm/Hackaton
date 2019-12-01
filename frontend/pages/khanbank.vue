@@ -1,11 +1,15 @@
 <template lang="html">
   <div class="">
-    khanbank
+    <Khanbank/>
   </div>
 </template>
 
 <script>
+import Khanbank from '~/components/khanbank.vue'
 export default {
+  components:{
+    Khanbank,
+  }
 }
 </script>
 
