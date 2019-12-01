@@ -1,17 +1,15 @@
 <template lang="html">
   <v-app>
-    <Navbar/>
-    <nuxt/>
+    <live/>
+
   </v-app>
 </template>
 
 <script>
-import Navbar from "~/components/navbar.vue";
-import live from "~/components/live.vue";
+import live from '~/components/live.vue'
 export default {
   components:{
-
-    Navbar
+    live,
   }
 
 }
