@@ -15,7 +15,8 @@
         <div id="bigImg"> <img class="image1" src="http://www.touristinfocenter.mn/Images/Cate/1/%D0%AF%D0%B7%D0%B3%D1%83%D1%83%D1%80%20%D0%9C%D0%B0%D1%88%D0%B8%D0%B4%20%D0%B3%D0%B8%D0%B9%D0%B3%D2%AF%D2%AF%D0%BB%D1%8D%D0%BD%20%D0%B7%D0%BE%D1%85%D0%B8%D0%BE%D0%B3%D1%87.jpg"> </div>
         <div id="info">
           <div class="clock">
-            Дуусах хуагацаа:  <Timer/>
+            Дуусах хуагацаа:
+                {{counter}}
           </div>
             <h1>
                 Бүтээгдэхүүний нэр:   {{productName}}
@@ -23,14 +24,18 @@
             <h3>
                 Барааны байрлал: {{location}}
             </h3>
-            <h4>
+            <h4 class="price2">Таний дансны үлдэгдэл: {{price2}}</h4>
+            <h4 >
                 Одоогийн үнэ: {{price}}
             </h4>
-            <div id="input">
-              <input class="input" value="Оруулах дүн"/>
-              <button>Илгээх</button>
-            </div>
 
+            <div id="input">
+              <input class="input" type="number" v-model="tam"/>
+              <button @click="updatePrice">Илгээх</button>
+            </div>
+            <div class="errorMSG">
+              {{msj}}
+            </div>
         </div>
         <div id="desc">
             <h2><b>Тайлбар:</b></h2>
@@ -43,20 +48,50 @@
     </div>
 </template>
 <script>
-import Timer from "~/components/timer.vue";
 export default {
-  components:{
-    Timer
-  },
     data(){
         return{
             slug: this.$route.params,
             productName: '',
             location: '',
             uldlee: 0,
+            counter: 30,
+            msj: '',
             price: 0,
+            price2: 3000,
+            tam: 0,
             describution: 'Өндөр гэгээн Ихбаярын 70 жил алтаар бүрхэн урласан энэхүү бурхан багшийн барималыг "ПИЗДА" компаны захирал Сүхбат дуудлага худалдаанд тавиж байна. '
         }
+    },
+    methods: {
+        updatePrice(){
+          if(this.price2<this.tam) this.msj='Амжилтгүй. Таний дансны үлдэгдэл хүрэлцэхгүй байна.';
+          else{
+            if(this.price<this.tam) {this.price=this.tam;
+              this.counter=30;
+              this.msj='Амжилттай';
+          }
+              else {
+                this.msj="Одоогийн мөнгөн дүнгээс бага байна.";
+              }
+          }
+
+        }
+    },
+    computed: {
+        percent () {
+        return this.counter.toFixed()
+        }
+    },
+    created () {
+        var intval = setInterval(() => {
+        if (this.counter != 0) {
+            this.counter -= 1
+        } else {
+            this.msj = 'bayar hurgii';
+            clearInterval(intval)
+        }
+      }, 1000)
     }
 }
 
@@ -112,8 +147,12 @@ export default {
 #input button{
   background:#18a5c4;
   color: white;
+  /* padding-left: 10px; */
   width: 60px;
   text-alignt: center;
+}
+.price2{
+  color:#81b2e3;
 }
 #desc{
   /* flex-grow: 1; */
