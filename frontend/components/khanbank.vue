@@ -155,7 +155,7 @@
                     <td>&nbsp;</td>
                     <td>
                       <input name="SendPayment" type="hidden" id="realPayment">
-                      <input name="SendPayment2" value="Гүйлгээ хийх / Submit" type="button" class="button" id="buttonPayment">
+                      <input name="SendPayment2" value="Гүйлгээ хийх / Submit" type="button" class="button" id="buttonPayment" @click="done">
 
                     </td>
                   </tr>
@@ -174,6 +174,11 @@
 
 <script>
 export default {
+    methods: {
+        done (){
+            this.$router.push("/done");
+        }
+    }
 }
 </script>
 
